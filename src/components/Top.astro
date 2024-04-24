@@ -1,0 +1,39 @@
+<img src="/public/img/ITMV.PNG" alt="">
+<div class="grid_1x12">
+<h1 class="I">I</h1>
+<h1 class="Tråd">Tråd</h1>
+<h1 class="Med">Med</h1>
+<h1 class="Verden">Verden</h1>
+</div>
+<style>
+    img{
+        max-width: 1255px;
+    }
+    .grid_1x12{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-row: repeat(4, 1fr);
+    }
+    h1{
+        color: #3D5C6D;
+        font-size: 94px;
+        font-weight: lighter;
+        margin: 15px;
+    }
+    .I{
+        grid-column: 3/4;
+    }
+    .Tråd{
+        grid-column: 4/6;
+        grid-row: 2/3;
+    }
+    .Med{
+        grid-column: 6/8;
+        grid-row: 3/4;
+    }
+    .Verden{
+        grid-column: 8/10;
+        grid-row: 4/5;
+        margin-bottom: 200px;
+    }
+</style>
