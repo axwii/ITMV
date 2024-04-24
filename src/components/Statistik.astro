@@ -1,18 +1,24 @@
 <h1>Statistik</h1>
-<p>
-  I forhold til tidligere år har syerskerne arbejdet markant mere og ITMV har
-  fået skabet reelle deltidsjobs på værkstederne. Målt i løntimer har vi givet
-  5625 løntimer til målgruppen i 2023 mod det halve sidste år, hvor det lå på
-  2805 timer – en stigning på over 100%
-</p>
+<div class="statistik_container">
+  <p class="boks">
+    I forhold til tidligere år har syerskerne arbejdet markant mere og ITMV har
+    fået skabet reelle deltidsjobs på værkstederne. Målt i løntimer har vi givet
+    5625 løntimer til målgruppen i 2023 mod det halve sidste år, hvor det lå på
+    2805 timer – en stigning på over 100%
+  </p>
+  <img src="img/lagkagediagram.gif" alt="lakage diagram" />
+</div>
 
-<p>
-  Resultaterne fra praktikantundersøgelsen indikerer en generel positiv
-  oplevelse blandt deltagerne. De fleste praktikanter har givet udtryk for
-  tilfredshed med deres praktikforløb og rapporterer om værdifulde erfaringer og
-  læring. Mange har også haft glæde af den strukturerede hverdag og muligheden
-  for at lære nye færdigheder og forbedre deres selvtillid.
-</p>
+<div class="statistik_container">
+  <img src="img/diagram2.gif" alt="søjle diagram" />
+  <p class="boks">
+    Resultaterne fra praktikantundersøgelsen indikerer en generel positiv
+    oplevelse blandt deltagerne. De fleste praktikanter har givet udtryk for
+    tilfredshed med deres praktikforløb og rapporterer om værdifulde erfaringer
+    og læring. Mange har også haft glæde af den strukturerede hverdag og
+    muligheden for at lære nye færdigheder og forbedre deres selvtillid.
+  </p>
+</div>
 
 <style>
   h1 {
@@ -22,9 +28,64 @@
     max-width: 15ch;
     margin-left: 25px;
   }
-
   p {
     font-size: 18px;
     color: #3d5c6d;
   }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .gif {
+    opacity: 0;
+  }
+
+  .statistik_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .boks {
+    background-color: #eadfdc;
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var gifs = document.querySelectorAll(".gif");
+
+    function isScrolledIntoView(elem) {
+      var rect = elem.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <=
+          (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    function startGifOnScroll() {
+      gifs.forEach(function (gif) {
+        if (isScrolledIntoView(gif)) {
+          var src = gif.getAttribute("data-src");
+          if (src) {
+            gif.setAttribute("src", src);
+            gif.removeAttribute("data-src");
+          }
+        }
+      });
+    }
+
+    window.addEventListener("load", startGifOnScroll);
+    window.addEventListener("scroll", startGifOnScroll);
+  });
+</script>
