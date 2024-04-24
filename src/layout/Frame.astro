@@ -18,6 +18,53 @@ const { pageTitle } = Astro.props;
       <slot />
     </main>
     <footer>
+      <img id="logo" src="/img/ITMVlogo.png" alt="logo" />
+      <div id="mid1">
+        <div id="midholder1">
+          <p>Find os</p>
+
+          <div>
+            <h2>Værkstedet i Lundtoftegade</h2>
+            <p>Lundtoftegade 23, 1 sal 2200 København N</p>
+          </div>
+
+          <div>
+            <h2>Værkstedet i Farum Midtpunkt</h2>
+            <p>Nygardterasserne 213A 3520 Farum</p>
+          </div>
+        </div>
+        <div>
+          <p>Kontakt os</p>
+          <p><span>Mail:</span> itmv@itmv.dk</p>
+          <p><span>Telefon:</span> 60877307</p>
+          <p><span>CVR:</span> 34449686</p>
+        </div>
+      </div>
+      <div></div>
     </footer>
   </body>
 </html>
+
+<style>
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #c0c4b6;
+    padding: 100px;
+    margin-top: 5%;
+  }
+  #logo {
+    width: 200px;
+    padding-left: 50px;
+    padding-top: 20px;
+  }
+  #midholder1 {
+  }
+  #mid1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+</style>
