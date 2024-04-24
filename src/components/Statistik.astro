@@ -1,6 +1,6 @@
 <h1>Statistik</h1>
 <div class="statistik_container">
-  <p>
+  <p class="boks">
     I forhold til tidligere år har syerskerne arbejdet markant mere og ITMV har
     fået skabet reelle deltidsjobs på værkstederne. Målt i løntimer har vi givet
     5625 løntimer til målgruppen i 2023 mod det halve sidste år, hvor det lå på
@@ -8,16 +8,16 @@
   </p>
   <img src="img/lagkagediagram.gif" alt="lakage diagram" />
 </div>
+
 <div class="statistik_container">
-  <p>
+  <img src="img/diagram2.gif" alt="søjle diagram" />
+  <p class="boks">
     Resultaterne fra praktikantundersøgelsen indikerer en generel positiv
     oplevelse blandt deltagerne. De fleste praktikanter har givet udtryk for
     tilfredshed med deres praktikforløb og rapporterer om værdifulde erfaringer
     og læring. Mange har også haft glæde af den strukturerede hverdag og
     muligheden for at lære nye færdigheder og forbedre deres selvtillid.
   </p>
-
-  <img src="img/diagram2.gif" alt="søjle diagram" />
 </div>
 
 <style>
@@ -45,6 +45,15 @@
   .statistik_container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .boks {
+    background-color: #eadfdc;
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   }
 </style>
 
