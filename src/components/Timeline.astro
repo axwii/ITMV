@@ -1,0 +1,141 @@
+<div class="timeline">
+  <div class="line"></div>
+  <div class="event left">
+    <div class="year">2010</div>
+    <div class="title">Ishøj</div>
+    <div class="description">
+      Etablering af den første lille butik med fokus på bæredygtigt håndværk
+    </div>
+  </div>
+  <div class="event right">
+    <div class="year">2012</div>
+    <div class="title">Rødovre</div>
+    <div class="description">
+      Udvidelse af forretningen til en større butik og starten på et lokalt
+      samarbejde med kunsthåndværkere.
+    </div>
+  </div>
+  <div class="event left">
+    <div class="year">2018</div>
+    <div class="title">Gladsaxe</div>
+    <div class="description">
+      Starten på den socialøkonomiske virksomhed med fokus på at skabe
+      arbejdspladser til udsatte grupper og bæredygtig produktion
+    </div>
+  </div>
+  <div class="event right">
+    <div class="year">2019</div>
+    <div class="title">Amager</div>
+    <div class="description">
+      Udvidelse af virksomhedens rækkevidde til en ny lokalitet med fokus på at
+      nå flere kunder og styrke lokalsamfundet.
+    </div>
+  </div>
+  <div class="event left">
+    <div class="year">2020</div>
+    <div class="title">Nørebro</div>
+    <div class="description">
+      Etablering af et nyt produktionsværksted med fokus på innovation og
+      kreativitet
+    </div>
+  </div>
+  <div class="event right">
+    <div class="year">2022</div>
+    <div class="title">Farum</div>
+    <div class="description">
+      Åbning af en ny butik i en forstad med fokus på at nå ud til nye
+      kundegrupper og styrke virksomhedens vækst.
+    </div>
+  </div>
+  <div class="event left">
+    <div class="year">2023</div>
+    <div class="title">To velfungerende værksteder</div>
+    <div class="description">
+      Konsolidering af virksomhedens aktiviteter med to velfungerende
+      værksteder, der fremmer bæredygtighed og social inklusion.
+    </div>
+  </div>
+  <!-- Add more events as needed -->
+</div>
+
+<style>
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+  }
+
+  .line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #3d5c6d;
+    transform: translateX(-50%);
+  }
+
+  .event {
+    position: relative;
+    margin-bottom: 40px;
+    color: #3d5c6d;
+  }
+
+  .event .year {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .event .title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .event .description {
+    font-size: 14px;
+  }
+
+  .event.left .description {
+    max-width: calc(
+      50% - 40px
+    ); /* Limiting width to half of the container minus padding */
+    word-wrap: break-word; /* Allowing long words to break */
+  }
+
+  .event.right .description {
+    max-width: calc(
+      50% - 40px
+    ); /* Limiting width to half of the container minus padding */
+    display: inline-flex;
+    word-wrap: break-word; /* Allowing long words to break */
+  }
+
+
+  .right {
+    text-align: right;
+  }
+
+  /* Connecting lines */
+  .event::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: calc(50% + 20px); /* Adjusted to extend beyond text */
+    height: 2px;
+    background-color: #3d5c6d;
+    z-index: -1;
+  }
+
+  .left::before {
+    left: -20px; /* Adjusted to position properly */
+    transform: translateY(-50%);
+  }
+
+  .right::before {
+    right: -20px; /* Adjusted to position properly */
+    transform: translateY(-50%);
+  }
+</style>

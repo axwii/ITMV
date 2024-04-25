@@ -12,7 +12,20 @@ const { pageTitle } = Astro.props;
 <html lang="en">
   <body>
     <header>
-      <nav><a href="/">home</a></nav>
+      <div class="container">
+        <div class="logo">
+          <a href="/">
+            <img src="/img/ITMVlogo.png" alt="Astro Logo" />
+          </a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Om os</a></li>
+            <li><a href="#">Samarbejde</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <slot />
@@ -66,5 +79,40 @@ const { pageTitle } = Astro.props;
     justify-content: center;
     align-items: center;
     gap: 3rem;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .logo img {
+    height: 50px; /* Adjust the height as needed */
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline;
+    margin-left: 20px;
+    text-decoration: none;
+  }
+  nav ul li a{
+    text-decoration: none;
+    color: #3D5C6D;
+  }
+  nav ul li a:hover{
+    text-decoration: underline;
+    color: #324d5b;
+  }
+
+  nav ul li:first-child {
+    margin-left: 0;
   }
 </style>
